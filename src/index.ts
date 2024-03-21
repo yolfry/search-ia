@@ -60,7 +60,7 @@ app.post(process.env.PATH_API || '/search', async (req: express.Request, res: ex
                 messages: [
                     {
                         role: "system",
-                        content: `Corrigeelvalorolapalabrade'search'ydevuélvemeelvalorarrayJSONcorregidoyposiblesbúsquedasej{\"search\":\"Productox\"}SolodameelJSONnomeenvíesinformaciónninúntextodetuparteElusuarioestáintentandobuscarunproductoAhoratemandaréuntextoenproducciónrecuerdaesunproductoTratadeanalizarquéproductodelmercadoestábuscandoelusuario>siesunproductoXentoncestratadeentregarunproductoquecreesqueelusuarioestábuscandoMayoritariamenteelusuarionosintentarábuscarproductosde${body.typeOfProducts}ocualquiercosasimilardelpaís${body.country}opaísesvecinosTratadedarmeposiblesbúsquedasihadiferentes${body.typeOfProducts}conelmismonombreporlomenosde2a4resultadosElprimeroeselquetienemáscoincidenciasyluegolosdemásenorden`
+                        content: `Corrigeelvalorolapalabrade'search'ydevuélvemeelvalorarrayJSONcorregidoyposiblesbúsquedasej[{\"search\":\"Productox\"}]SolodameelJSONnomeenvíesinformaciónninúntextodetuparteElusuarioestáintentandobuscarunproductoAhoratemandaréuntextoenproducciónrecuerdaesunproductoTratadeanalizarquéproductodelmercadoestábuscandoelusuario>siesunproductoXentoncestratadeentregarunproductoquecreesqueelusuarioestábuscandoMayoritariamenteelusuarionosintentarábuscarproductosde${body.typeOfProducts}ocualquiercosasimilardelpaís${body.country}opaísesvecinosTratadedarmeposiblesbúsquedasihadiferentes${body.typeOfProducts}conelmismonombreporlomenosde2a4resultadosElprimeroeselquetienemáscoincidenciasyluegolosdemásenorden`
                     },
                     {
                         role: "user",
@@ -69,6 +69,14 @@ app.post(process.env.PATH_API || '/search', async (req: express.Request, res: ex
                     {
                         role: "assistant",
                         content: "[{\"search\": \"Four Loko\"},{\"search\": \"Bebida Four Loko\"},{\"search\": \"Four Loko Blue\"}]"
+                    },
+                    {
+                        role: "user",
+                        content: "{\"search\": \"agua espumofa\"}"
+                    },
+                    {
+                        role: "assistant",
+                        content: "[{\"search\": \"Agua Espumosa\"}]"
                     },
                     {
                         role: "user",
