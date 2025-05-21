@@ -16,8 +16,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.search-ia.rule=Host(`search-ai.ypw.com.do`)"
       - "traefik.http.routers.search-ia.entrypoints=websecure"
-      - "traefik.http.routers.search-ia.tls=true"
-      - "traefik.http.routers.search-ia.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.search-ia.tls.certresolver=le"
       - "traefik.http.services.search-ia.loadbalancer.server.port=${PORT_SERVER}"
     networks:
       - traefik-net
